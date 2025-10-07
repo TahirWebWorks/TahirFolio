@@ -7,7 +7,7 @@ export default defineConfig({
   theme: {
     extend: {
       fontFamily: {
-        poppins: ["raleway", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
       },
     },
   },

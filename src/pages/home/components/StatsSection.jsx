@@ -2,8 +2,9 @@ import React from "react";
 
 function StatsSection() {
   return (
+
     <div className="grid grid-cols-4 grid-rows-2 my-24 gap-8 ">
-      <div className="p-10 rounded-2xl col-span-2 row-span-2 bg-gradient-to-br from-10% via-[#211933] to-[#8C52FF]">
+      <div className="p-10 rounded-2xl col-span-2 row-span-2 bg-gradient-to-br from-10% via-[#272f06] to-[#c9f31d]">
         <div>
         <div className="flex items-center gap-10">
         <h2 className="text-[150px] font-bold text-gray-900">5+</h2>
@@ -13,8 +14,7 @@ function StatsSection() {
         </div>
         <p className="text-gray-600 text-lg leading-relaxed">
           Crafting digital experiences through clean code and intuitive design.
-          I specialize in creating responsive, user-friendly websites and
-          applications that drive results and engage audiences.
+          I specialize in creating responsive, user-friendly websites
         </p>
         </div>
       </div>
