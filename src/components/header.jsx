@@ -11,7 +11,7 @@ function Header() {
   ];
   return (
     <div>
-      <div className="flex justify-between items-center py-4">
+      <div className="flex justify-between items-center py-8">
         <div className="font-raleway text-white text-3xl font-semibold">TahirFolio</div>
         <ul className="flex items-center">
           {menus.map((menu, index) => {
