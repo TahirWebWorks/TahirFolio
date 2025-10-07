@@ -8,7 +8,7 @@ import Contact from "./pages/Contact/contact";
 
 function App() {
   return (
-    <div className="max-w-7xl">
+    <div>
       <Router>
         <Header/>
         <Routes>

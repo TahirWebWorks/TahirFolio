@@ -7,15 +7,16 @@ function Header() {
     { path: "/about", label: "About" },
     { path: "/case-studies", label: "Case Studies" },
     { path: "/contact", label: "Contac Us" },
+    { path: "/hire-me", label: "Hire Me" },
   ];
   return (
     <div>
-      <div className="flex justify-between items-center p-4">
+      <div className="flex justify-between items-center py-4">
         <div className="font-raleway text-white text-3xl font-semibold">TahirFolio</div>
-        <ul className="flex">
-          {menus.map((menu) => {
+        <ul className="flex items-center">
+          {menus.map((menu, index) => {
             return(
-            <li className="text-white mx-3" key={menu.path}>
+            <li className={`text-white mx-3 font-medium ${index === menus.length - 1 ? "bg-gradient-to-r from-[#8C52FF] to-[#1f044f] text-white px-7 py-2 rounded" : ""} `} key={menu.path}>
               <Link to={menu.path}>{menu.label}</Link>
             </li>
             )
