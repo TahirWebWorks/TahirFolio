@@ -4,11 +4,11 @@ import SkillCard from "./SkillCard";
 
 function SkillsSection() {
   return (
-    <div className=" flex gap-25 bg-[#c9f31d1a]">
+    <div className=" flex gap-25 bg-[#1f1f1fb5]">
       <div className="w-[1300px] mx-auto px-4 py-20 flex gap-16">
         <div className="w-[40%]">
           <h3 className="text-xl">My Skills</h3>
-          <h2 className="text-5xl my-5">
+          <h2 className="text-5xl font-semibold my-5">
             Let’s Explore Popular Skills & Experience
           </h2>
           <p>

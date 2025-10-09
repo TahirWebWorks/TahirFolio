@@ -4,7 +4,7 @@ function StatsSection() {
   return (
 
     <div>
-      <div className="w-[1300px] mx-auto grid grid-cols-4 grid-rows-2 gap-8">
+      <div className="w-[1300px] mx-auto px-4 grid grid-cols-4 grid-rows-2 gap-8">
       <div className="p-10 rounded-2xl col-span-2 row-span-2 bg-gradient-to-br from-10% via-[#272f06] to-[#c9f31d]">
         <div>
         <div className="flex items-center gap-10">
