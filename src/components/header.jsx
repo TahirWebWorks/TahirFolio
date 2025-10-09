@@ -11,12 +11,12 @@ function Header() {
   ];
   return (
     <div>
-      <div className="flex justify-between items-center py-8">
+      <div className="max-w-[1300px] mx-auto px-4 py-6 flex justify-between items-center">
         <div className="font-raleway text-white text-3xl font-semibold">TahirFolio</div>
-        <ul className="flex items-center">
+        <ul className="flex items-center gap-4">
           {menus.map((menu, index) => {
             return(
-            <li className={`text-white mx-3 font-medium ${index === menus.length - 1 ? "bg-gradient-to-r from-[#c9f31d] to-[#272f06] text-white px-7 py-2 rounded" : ""} `} key={menu.path}>
+            <li className={` text-white font-medium ${index === menus.length - 1 ? "bg-gradient-to-r from-[#c9f31d] to-[#272f06] text-white px-7 py-2 rounded" : ""} `} key={menu.path}>
               <Link to={menu.path}>{menu.label}</Link>
             </li>
             )

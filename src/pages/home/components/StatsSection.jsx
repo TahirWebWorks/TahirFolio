@@ -3,7 +3,8 @@ import React from "react";
 function StatsSection() {
   return (
 
-    <div className="grid grid-cols-4 grid-rows-2 my-24 gap-8 ">
+    <div>
+      <div className="w-[1300px] mx-auto grid grid-cols-4 grid-rows-2 gap-8">
       <div className="p-10 rounded-2xl col-span-2 row-span-2 bg-gradient-to-br from-10% via-[#272f06] to-[#c9f31d]">
         <div>
         <div className="flex items-center gap-10">
@@ -34,6 +35,7 @@ function StatsSection() {
       <div className="flex flex-col items-center justify-center text-center bg-[#191818] rounded-2xl">
         <div className="text-3xl font-bold ">40+</div>
         <div className="text-gray-600 mt-2">Happy Clients</div>
+      </div>
       </div>
     </div>
   );
