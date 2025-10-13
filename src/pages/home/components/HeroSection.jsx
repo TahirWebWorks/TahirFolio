@@ -21,7 +21,7 @@ function HeroSection() {
           </h2>
           <p className="text-xl/8 font-light w-[470px]">I break down complex user experience problems to create integrity focussed solutions that connect billions of people.</p>
           <div className="mt-10">
-            <button className="px-8 py-3 text-[#c9f31d] border border-[#c9f31d] rounded-full">Download CV <Download className="inline ml-2" size={16} /></button>
+            <button className="px-8 py-3 text-[#c9f31d] border border-[#c9f31d] rounded-full cursor-pointer">Download CV <Download className="inline ml-2" size={16} /></button>
           </div>
         </div>
         <div className="flex justify-end w-1/2">
