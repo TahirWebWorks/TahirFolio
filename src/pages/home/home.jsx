@@ -3,6 +3,7 @@ import HeroSection  from './components/heroSection';
 import StatsSection from './components/StatsSection';
 import SkillsSection from './components/SkillsSection';
 import ServicesSection from './components/ServicesSection';
+import CtaSection from './components/CtaSection'
 
 function Home(){
     return(
@@ -11,6 +12,7 @@ function Home(){
            <StatsSection/>
            <SkillsSection/>
            <ServicesSection/>
+           <CtaSection/>
         </div>
     )
 }
