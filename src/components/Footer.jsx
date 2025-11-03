@@ -2,6 +2,20 @@ import React from 'react';
 import { Github, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
 function Footer() {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <footer className="bg-gradient-to-b from-[#000000] to-[#c9f31d] text-white py-16 pb-6">
       <div className="max-w-[1300px] mx-auto px-4">
@@ -30,10 +44,38 @@ function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="/" className="text-gray-300 hover:text-[#c9f31d] transition-colors">Home</a></li>
-              <li><a href="/about" className="text-gray-300 hover:text-[#c9f31d] transition-colors">About</a></li>
-              <li><a href="/case-studies" className="text-gray-300 hover:text-[#c9f31d] transition-colors">Case Studies</a></li>
-              <li><a href="/contact" className="text-gray-300 hover:text-[#c9f31d] transition-colors">Contact</a></li>
+              <li>
+                <span 
+                  onClick={() => scrollToSection("home")} 
+                  className="text-gray-300 hover:text-[#c9f31d] transition-colors cursor-pointer"
+                >
+                  Home
+                </span>
+              </li>
+              <li>
+                <span 
+                  onClick={() => scrollToSection("stats")} 
+                  className="text-gray-300 hover:text-[#c9f31d] transition-colors cursor-pointer"
+                >
+                  About
+                </span>
+              </li>
+              <li>
+                <span 
+                  onClick={() => scrollToSection("portfolio")} 
+                  className="text-gray-300 hover:text-[#c9f31d] transition-colors cursor-pointer"
+                >
+                  Portfolio
+                </span>
+              </li>
+              <li>
+                <span 
+                  onClick={() => scrollToSection("contact")} 
+                  className="text-gray-300 hover:text-[#c9f31d] transition-colors cursor-pointer"
+                >
+                  Contact
+                </span>
+              </li>
             </ul>
           </div>
 

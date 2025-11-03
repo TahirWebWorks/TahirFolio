@@ -1,33 +1,57 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const menus = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/case-studies", label: "Case Studies" },
-    { path: "/contact", label: "Contact Us" },
-    { path: "/hire-me", label: "Hire Me" },
+    { id: "home", label: "Home" },
+    { id: "stats", label: "About" },
+    { id: "skills", label: "Skills" },
+    { id: "services", label: "Services" },
+    { id: "portfolio", label: "Portfolio" },
+    { id: "contact", label: "Contact" },
   ];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80; // Header height offset
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
-    <div>
+    <div className="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#ffffff0d]">
       <div className="max-w-[1300px] mx-auto px-4 py-4 sm:py-6 flex justify-between items-center">
-        <div className="font-raleway text-white text-2xl sm:text-3xl font-semibold">TahirFolio</div>
+        <div 
+          className="font-raleway text-white text-2xl sm:text-3xl font-semibold cursor-pointer"
+          onClick={() => scrollToSection("home")}
+        >
+          TahirFolio
+        </div>
         
         {/* Desktop Menu */}
         <ul className="hidden lg:flex items-center gap-6 xl:gap-10">
           {menus.map((menu, index) => {
             return(
-            <li className={`text-white font-medium text-sm xl:text-base ${index === menus.length - 1 ? "bg-gradient-to-r from-[#c9f31d] to-[#272f06] text-white px-5 xl:px-7 py-2 rounded hover:from-[#b8e226] hover:to-[#2a3f06] transition-all" : "hover:text-[#c9f31d] transition-colors"} `} key={menu.path}>
-              <Link to={menu.path}>{menu.label}</Link>
+            <li 
+              className={`text-white font-medium text-sm xl:text-base cursor-pointer ${index === menus.length - 1 ? "bg-gradient-to-r from-[#c9f31d] to-[#272f06] text-white px-5 xl:px-7 py-2 rounded hover:from-[#b8e226] hover:to-[#2a3f06] transition-all" : "hover:text-[#c9f31d] transition-colors"} `} 
+              key={menu.id}
+              onClick={() => scrollToSection(menu.id)}
+            >
+              {menu.label}
             </li>
             )
           })}
@@ -49,13 +73,12 @@ function Header() {
           <ul className="flex flex-col px-4 py-4 space-y-3">
             {menus.map((menu, index) => {
               return(
-              <li className={`text-white font-medium ${index === menus.length - 1 ? "bg-gradient-to-r from-[#c9f31d] to-[#272f06] text-white px-4 py-2 rounded text-center" : "hover:text-[#c9f31d] transition-colors"} `} key={menu.path}>
-                <Link 
-                  to={menu.path} 
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {menu.label}
-                </Link>
+              <li 
+                className={`text-white font-medium cursor-pointer ${index === menus.length - 1 ? "bg-gradient-to-r from-[#c9f31d] to-[#272f06] text-white px-4 py-2 rounded text-center" : "hover:text-[#c9f31d] transition-colors"} `} 
+                key={menu.id}
+                onClick={() => scrollToSection(menu.id)}
+              >
+                {menu.label}
               </li>
               )
             })}
