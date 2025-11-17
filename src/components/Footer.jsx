@@ -17,7 +17,7 @@ function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-[#000000] to-[#c9f31d] text-white py-16 pb-6">
+    <footer className="bg-gradient-to-b text-white py-16 pb-6">
       <div className="max-w-[1300px] mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
@@ -42,7 +42,7 @@ function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-xl font-semibold mb-4 text-[#CDFF00]">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <span 

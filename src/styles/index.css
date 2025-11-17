@@ -8,7 +8,16 @@ body{
   /* max-width: 1250px; */
   margin: 0 auto;
   background-color: #000;
+  cursor: none;
 }
+
+/* Hide default cursor on desktop */
+@media (min-width: 1024px) {
+  * {
+    cursor: none !important;
+  }
+}
+
 h1,h2,h3,h4,h5,h6{
   font-family: 'Oswald', sans-serif;
   color: #fff;

@@ -50,7 +50,7 @@ function CaseStudiesPreview() {
                 />
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-4 relative z-10">
+            <div className="max-w-[1300px] mx-auto px-4 relative z-10">
                 {/* Section Header */}
                 <motion.div
                     className="text-center mb-16"
@@ -79,7 +79,7 @@ function CaseStudiesPreview() {
                         viewport={{ once: true }}
                         transition={{ delay: 0.3, duration: 0.6 }}
                     >
-                        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-4 leading-tight">
+                        <h2 className="text-4xl  sm:text-5xl lg:text-5xl font-bold mb-4 leading-tight">
                             Selected{' '}
                             <span
                                 className="relative inline-block"

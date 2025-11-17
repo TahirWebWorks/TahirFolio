@@ -20,7 +20,7 @@ function Works() {
     };
 
     return (
-        <div className="min-h-screen py-16 sm:py-20">
+        <div className=" min-h-screen py-16 sm:py-20">
             <div className="max-w-[1300px] mx-auto px-4">
                 {/* Header Section */}
                 <motion.div
