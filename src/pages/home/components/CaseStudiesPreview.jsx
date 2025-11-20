@@ -20,7 +20,7 @@ function CaseStudiesPreview() {
     };
 
     return (
-        <div className="py-20 sm:py-28 relative overflow-hidden">
+        <div className="relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute inset-0 pointer-events-none">
                 <motion.div
